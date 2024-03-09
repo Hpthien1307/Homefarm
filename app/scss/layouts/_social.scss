@@ -1,0 +1,23 @@
+.nav-social{
+    .social-list{
+        display: flex;
+        align-items: center;
+        gap: 1.4rem;
+        .social-link{
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            transition: 0.3s linear;
+            img{
+                transition: 0.4s ease-out;
+            }
+        }
+    }
+    .social-item:hover{
+        .social-link{
+            img{
+                filter: brightness(0) saturate(100%)
+            }
+        }
+    }
+}

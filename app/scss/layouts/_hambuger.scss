@@ -1,0 +1,53 @@
+.hd-bar{
+    @media (min-width:1200px){
+        display: none;
+    }
+}
+
+.ham{
+    position: relative;
+    z-index: 4;
+    width: 3.2rem;
+    height: 3.2rem;
+    background: $color-pri;
+    border-radius: .2rem;
+    .menu-svg{
+        transition: 0.4s ease;
+        path{
+            fill: none;
+            transition: stroke-dasharray .4s,stroke-dashoffset .4s;
+            stroke: $white;
+            stroke-width: 6;
+            stroke-linecap: round;
+            &:nth-child(1){
+                stroke-dasharray: 40 160;
+            }
+            &:nth-child(2){
+                transform: rotate(0);
+            }
+            &:nth-child(3){
+                stroke-dasharray: 40 85;
+                transform-origin: 50%;
+                transition: transform .4s,stroke-dashoffset .4s;
+            }
+        }
+    }
+}
+
+.ham.active{
+    .menu-svg{
+        transform: rotate(45deg);
+        path{
+            &:nth-child(1),&:nth-child(3){
+                stroke-dashoffset : -64px;
+            }
+            &:nth-child(2){
+                transform-origin: 50%;
+                transform: rotate(90deg);
+            }
+            &:nth-child(3){
+                stroke-dashoffset : -64px;
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+block vars
+    -title = 'Template'
+    -mainClass = 'page-template'
+    -bodyClass = ''
+    -hdClass = ''
+header.hd(class=hdClass)
+  .container  
+    .hd-wr.d-flex 
+      a(href="").custom-logo-link
+        +img('logo.svg')
+      .hd-nav.d-flex 
+        ul.menu-list.d-flex 
+          -
+            var arrays = [
+              {
+                menuLink: 'About Us',
+                dropDown: 'dropdown',
+                current: 'current-menu-item',
+              },
+              {
+                menuLink: 'Carrer',
+                dropDown: '',
+                current: '',
+              },
+              {
+                menuLink: 'Products',
+                dropDown: '',
+                current: '',
+              },
+              {
+                menuLink: 'Contact',
+                dropDown: 'dropdown',
+                current: '',
+              },
+            ];
+          each arr in arrays 
+            li(class=`menu-item ${arr.dropDown}`)
+              a(href="" class=`menu-link ${arr.current}`)= arr.menuLink
+                if arr.dropDown
+                  span.ic-down 
+                    i.fa-solid.fa-caret-down
+              if arr.dropDown
+                ul.menu-list 
+                  -
+                    var arrays2 = [
+                      {
+                        menuLink: 'Demo',
+                        dropDown: '',
+                      },
+                      {
+                        menuLink: 'Demo',
+                        dropDown: '',
+                      },
+                      {
+                        menuLink: 'Demo',
+                        dropDown: '',
+                      },
+                      {
+                        menuLink: 'Demo',
+                        dropDown: '',
+                      },
+                    ];
+                  each arr in arrays2
+                    li(class=`menu-item ${arr.dropDown}`)
+                      a(href='' class=`menu-link`)= arr.menuLink
+      .hd-action 
+        .hd-cart
+        .hd-reg
+        .hd-search
+        .hd-bar.hamBlock
+          .ham.hamTarget
+            svg(
+              viewBox="0 0 100 100" 
+              class="menu-svg"
+              )
+              path(
+                d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+                )
+              path.path-2(d="m 30,50 h 40")
+              path(
+                d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+            )
+  //- menu-mobile
+  .menu-mb.menuMb

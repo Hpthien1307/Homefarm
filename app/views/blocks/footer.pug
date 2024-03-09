@@ -1,0 +1,27 @@
+.ft
+    .container 
+        .ft-wr.row 
+            .ft-item.col-4 
+                ul.menu-list 
+                    -
+                        var arrays = [
+                            {
+                                menuLink: 'About us',
+                            },
+                            {
+                                menuLink: 'Career',
+                            },
+                            {
+                                menuLink: 'Products',
+                            },
+                            {
+                                menuLink: 'Contact',
+                            },
+                        ];
+                    each arr in arrays
+                        li.menu-item 
+                            a(href="").menu-link= arr.menuLink
+    
+                                
+
+

@@ -1,0 +1,50 @@
+.box-quantity{
+    width: 8rem;
+    height: 2.4rem;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    border-radius: 0.4rem;
+    border: 0.1rem solid #BDBDBD;
+    background: $white;
+    .minus{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2rem;
+        height: 100%;
+        color: $black;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+    input{
+        margin: 0 auto;
+        text-align: center;
+        width: 4rem;
+        height: 100%;
+        color: $black;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+    .box-qc{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .ip-value{
+        display: none;
+    }
+    .count-number{
+        color: $black;
+        font-weight: 500;
+    }
+    .plus{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 2rem;
+        height: 100%;
+        color: $black;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+}

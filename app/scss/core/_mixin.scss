@@ -1,0 +1,101 @@
+// reponsive text
+
+@mixin lc($value: 3) {
+    display: -webkit-box;
+    -webkit-line-clamp: $value;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+// image
+
+@mixin imgPd($Height, $Width) {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding-top: calc((#{$Height} / #{$Width})*100%);
+}
+
+@mixin imgCover() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@mixin imgContain() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+// breakpoints
+
+@mixin max($value) {
+    @media screen and (max-width: $value) {
+        @content;
+    }
+}
+
+@mixin min-max($min, $max) {
+    @media (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}
+
+@mixin min($value) {
+    @media screen and (min-width: $value) {
+        @content;
+    }
+}
+
+// flex
+@mixin flex() {
+    display: flex;
+}
+
+@mixin flexRowRev() {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+@mixin flexColRev() {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@mixin flexCol() {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexSpc() {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flexStart() {
+    display: flex;
+    justify-content: flex-start;
+}
+
+@mixin flexEnd() {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+

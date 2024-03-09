@@ -1,0 +1,18 @@
+.ft{
+    background-color: $black;
+}
+
+.ft-item{
+    .menu-list{
+        .menu-item{
+            .menu-link{
+                transition: .4s;
+            }
+            &:hover{
+                .menu-link{
+                    color: $color-pri;
+                }
+            }
+        }
+    }
+}

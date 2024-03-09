@@ -1,0 +1,18 @@
+mixin img(name)
+  img(src="./assets/images/" + name, alt="")
+
+mixin stars()
+  .star 
+    .star-list
+        .star-flex.star-empty
+          i.fa-regular.fa-star.icon
+          i.fa-regular.fa-star.icon
+          i.fa-regular.fa-star.icon
+          i.fa-regular.fa-star.icon
+          i.fa-regular.fa-star.icon
+        .star-flex.star-filter(style='width: 100%;')
+          i.fa-solid.fa-star.icon
+          i.fa-solid.fa-star.icon
+          i.fa-solid.fa-star.icon
+          i.fa-solid.fa-star.icon
+          i.fa-solid.fa-star.icon

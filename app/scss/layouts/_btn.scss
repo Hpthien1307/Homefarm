@@ -1,0 +1,51 @@
+.btn{
+    font-family: var(--font-pri);
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 6rem;
+    transition: 0.4s ease-in-out;
+    @media (max-width:1200px){
+        min-height: 5rem;
+    }
+    .txt{
+        color: $white;
+        font-size: 1.6rem;
+        font-weight: 400;
+        transition: 0.4s ease-in-out;
+        @media (max-width:1200px){
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.btn.btn-pri{
+    // background-color: $color-pri;
+    &:hover{
+        // background-color: ;
+        .txt{
+            // color: ;
+        }
+    }
+}
+
+.btn.btn-sec{
+    // background-color: $color-pri;
+    &:hover{
+        // background-color: ;
+        .txt{
+            // color: ;
+        }
+    }
+}
+
+.btn.btn-third{     
+    // background-color: $color-pri;
+    &:hover{
+        // background-color: ;
+        .txt{
+            // color: ;
+        }
+    }
+}
