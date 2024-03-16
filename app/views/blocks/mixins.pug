@@ -16,3 +16,36 @@ mixin stars()
           i.fa-solid.fa-star.icon
           i.fa-solid.fa-star.icon
           i.fa-solid.fa-star.icon
+
+mixin formSearch(plcTxt, classCustom)
+  .form-search(class=classCustom)
+    form(action="")
+      .form-search-wr
+        span.input
+          input(type="text" placeholder= plcTxt)
+        button.btn.btn-search(type='submit')
+          span.ic 
+            i.fa-solid.fa-magnifying-glass
+
+mixin boxActHd(icon, txtTop, txtBot, classCustom)
+  .box-act(class=classCustom)
+    .ic 
+      i(class= icon)
+    .content
+      if classCustom == 'sup' 
+        p.txt.top= txtTop
+        a(href="").txt.bot= txtBot
+      else 
+        a(href="").txt.top= txtTop
+        a(href="").txt.bot= txtBot
+
+mixin cart(txt, number)
+  .hd-cart 
+    .inner 
+      .ic 
+        i.fa-solid.fa-bag-shopping
+      p.txt= txt 
+      .box 
+        span.num= number
+
+

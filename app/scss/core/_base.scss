@@ -1,5 +1,6 @@
 // @import url("../assets/font/Themify/stylesheet.css");
 // @import url("../assets/font/Roboto/stylesheet.css");
+@import url("../assets/font/Roboto/stylesheet.css");
 
 * {
     box-sizing: border-box;
@@ -19,7 +20,7 @@ body {
     font-size: 16px;
     line-height: 1.55;
     font-weight: 400;
-    color: #000000;
+    color: $color-text;
     overflow: hidden auto;
 
     @media screen and (min-width: 2000px) {
@@ -114,20 +115,16 @@ img {
     flex-direction: column;
 }
 
-.spc-it{
-    padding: 0 $spc-it;
+.ss-pd{
+    padding: 0 var(--ss-pd);
 }
 
-.spc-ele{
-    padding: 0 $spc-ele;
+.ss-pd-t{
+    padding-top: 0 calc(var(--ss-pd) * 2);
 }
 
-.spc-ele-t{
-    padding-top: $spc-ele;
-}
-
-.spc-ele-b{
-    padding-bottom: $spc-ele;
+.ss-pd-b{
+    padding-bottom: 0 calc(var(--ss-pd) * 2);
 }
 
 .p-center{
@@ -140,9 +137,5 @@ img {
 
 .p-rt{
     margin-right: auto;
-}
-
-.ic{
-    flex-shrink: 0;
 }
 

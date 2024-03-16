@@ -1,66 +1,128 @@
 .hd{
-    background-color: $black;
-    .hd-wr{
-        align-items: center;
-        justify-content: space-between;
+    width: 100%;
+    .hd-up{
+        background-color: $color-pri;
+        height: var(--size-hd-top);
     }
-}
-
-.hd-nav{
-    .menu-list{
-        >.menu-item{
-            position: relative;
-            transition: .4s;
-            >.menu-link{
-                display: flex;
-                align-items: center;
-                flex-wrap: nowrap;
-                white-space: nowrap;
-                padding: 1.2rem 1.6rem;
-                transition: .4s;
-                .ic-down{
-                    display: flex;
-                    margin-left: 0.8rem;
-                    transition: .4s;
-                    i{
-                        font-size: 1.6rem;
-                    }
-                }
-            }
-            >.menu-link.current-menu-item{
+    .hd-bot{
+        background-color: $white;
+    }
+    .hd-up-wr{
+        @include row(1);
+        align-items: center;
+        height: 100%;
+    }
+    .hd-bot-wr{
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    .hd-logo{
+        @include item(2,1);
+    }
+    .hd-action{
+        @include item(5,1);
+        display: flex;
+        align-items: center;
+        column-gap: 1.6rem;
+    }
+    .custom-logo-link{
+        display: flex;
+        width: var(--w-logo);
+    }
+    .form-search{
+        @include item(5,1);
+        form{
+            width: 100%;
+        }
+        .form-search-wr{
+            width: 100%;
+        }
+        .input{
+            flex: 1;
+        }
+        .btn{
+            width: 4rem;
+        }
+    }
+    .box-act{
+        display: flex;
+        align-items: center;
+        .content{
+            @include flexCol;
+        }
+        .ic{
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 50%;
+            background-color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1.6rem;
+            i{
+                font-size: 1.2rem;
                 color: $color-pri;
             }
+        }
+        .txt{
+            color: $white;
+            transition: .3s linear;
             &:hover{
-                background-color: $white;
-                >.menu-link{
-                    color: $color-pri;
-                    .ic-down{
-                        transform: rotate(180deg);
-                    }
-                }
-                >.menu-list{
-                    opacity: 1;
-                    visibility: visible;
-                }
+                color: $color-second;
+            }
+        }
+        &.sup{
+            .txt.bot{
+                font-weight: 700;
+            }
+        }
+        &.acount{
+            .txt.bot{
+                font-size: 1.28rem;
             }
         }
     }
-}
-
-.dropdown{
-    .menu-list{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: $color-pri;
-        width: 15rem;
-        opacity: 0;
-        visibility: hidden;
-        transition: .4s;
-        .menu-item{
-            .menu-link{
+    .hd-cart {
+        .inner{
+            display: flex;
+            align-items: center;
+            padding: 0.8rem;
+            border: 0.2rem solid $white;
+            border-radius: 0.6rem;
+            cursor: pointer;
+            &:hover{
+                background-color: $white;
+                .ic{
+                    i{
+                        color: $color-pri;
+                    }
+                }
+                .txt{
+                    color: $color-pri;
+                }
+            }
+        }
+        .ic{
+            i{
+                font-size: 2.6rem;
+                color: $white;
+                transition: all .4s linear;
+            }
+        }
+        .txt{
+            color: $white;
+            padding: 0 0.5rem;
+            transition: all .4s linear;
+        }
+        .box{
+            padding: 0.2rem 0.6rem;
+            background-color: $color-second;
+            border-radius: 0.4rem;
+            .num{
                 display: flex;
-                padding: 1.2rem 1.6rem;
+                font-size: 1.2rem;
+                color: $black;
             }
         }
     }

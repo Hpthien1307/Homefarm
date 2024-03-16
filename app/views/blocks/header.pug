@@ -4,69 +4,9 @@ block vars
     -bodyClass = ''
     -hdClass = ''
 header.hd(class=hdClass)
-  .container  
-    .hd-wr.d-flex 
-      a(href="").custom-logo-link
-        +img('logo.svg')
-      .hd-nav.d-flex 
-        ul.menu-list.d-flex 
-          -
-            var arrays = [
-              {
-                menuLink: 'About Us',
-                dropDown: 'dropdown',
-                current: 'current-menu-item',
-              },
-              {
-                menuLink: 'Carrer',
-                dropDown: '',
-                current: '',
-              },
-              {
-                menuLink: 'Products',
-                dropDown: '',
-                current: '',
-              },
-              {
-                menuLink: 'Contact',
-                dropDown: 'dropdown',
-                current: '',
-              },
-            ];
-          each arr in arrays 
-            li(class=`menu-item ${arr.dropDown}`)
-              a(href="" class=`menu-link ${arr.current}`)= arr.menuLink
-                if arr.dropDown
-                  span.ic-down 
-                    i.fa-solid.fa-caret-down
-              if arr.dropDown
-                ul.menu-list 
-                  -
-                    var arrays2 = [
-                      {
-                        menuLink: 'Demo',
-                        dropDown: '',
-                      },
-                      {
-                        menuLink: 'Demo',
-                        dropDown: '',
-                      },
-                      {
-                        menuLink: 'Demo',
-                        dropDown: '',
-                      },
-                      {
-                        menuLink: 'Demo',
-                        dropDown: '',
-                      },
-                    ];
-                  each arr in arrays2
-                    li(class=`menu-item ${arr.dropDown}`)
-                      a(href='' class=`menu-link`)= arr.menuLink
-      .hd-action 
-        .hd-cart
-        .hd-reg
-        .hd-search
+  .hd-up
+    .container 
+      .hd-up-wr
         .hd-bar.hamBlock
           .ham.hamTarget
             svg(
@@ -80,5 +20,17 @@ header.hd(class=hdClass)
               path(
                 d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
             )
+        .hd-logo
+          a(href="").custom-logo-link
+            +img('logo.png')
+        +formSearch('Tìm kiếm sản phẩm')
+        .hd-action 
+          +boxActHd('fa-solid fa-phone','Hỗ trợ khách hàng','02471081008','sup')
+          +boxActHd('fa-solid fa-user','Tài khoản','Đăng nhập','acount')
+          +cart('Giỏ hàng', '0')
+  .hd-bot
+    .container 
+      .hd-bot-wr 
+
   //- menu-mobile
   .menu-mb.menuMb

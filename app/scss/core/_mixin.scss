@@ -97,5 +97,16 @@
     justify-content: flex-end;
 }
 
+@mixin row($mg) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -#{$mg}rem;
+}
+
+@mixin item($w,$pd) {
+    width: calc((#{$w}/12)*100%);
+    padding: 0 #{$pd}rem;
+}
+
 
 
