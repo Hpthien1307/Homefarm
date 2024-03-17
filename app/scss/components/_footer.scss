@@ -1,18 +1,62 @@
 .ft{
-    background-color: $black;
+    background-color: $white;
+    .ft-wr{
+        padding: 4rem 0;
+    }
 }
 
 .ft-item{
+    .tt-ft{
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 1.7rem;
+    }
     .menu-list{
         .menu-item{
+            margin-bottom: 0.4rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            .ic{
+                display: block;
+                width: 2rem;
+                i{
+                    font-size: 1.6rem;
+                    color: $orange;
+                    margin-right: 0.5rem;
+                }
+            }
             .menu-link{
                 transition: .4s;
             }
             &:hover{
                 .menu-link{
-                    color: $color-pri;
+                    color: $orange;
                 }
             }
+        }
+    }
+    .fanpage{
+        margin-bottom: 1.6rem;
+    }
+    &:first-child{
+        .menu-item{
+            display: flex;
+            margin-bottom: 1rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        .menu-link{
+            font-size: 1.5rem;
+        }
+        .logo{
+            display: block;
+            width: 10rem;
+            margin-bottom: 1.6rem;
+        }
+        .txt{
+            margin-bottom: 1.6rem;
         }
     }
 }

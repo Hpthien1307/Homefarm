@@ -1,27 +1,99 @@
 .ft
     .container 
         .ft-wr.row 
-            .ft-item.col-4 
+            .ft-item.col.col-lg-3
+                h4.tt-ft Về chúng tôi
+                a(href="").logo
+                    +img('logo-ft.png') 
+                p.txt Cung cấp thực phẩm đạt tiêu chuẩn Quốc Tế
                 ul.menu-list 
                     -
                         var arrays = [
                             {
-                                menuLink: 'About us',
+                                menuLink: 'Địa chỉ: Số 282 Hoàng Văn Thái, Khương Trung, Thanh Xuân, TP Hà Nội.',
+                                icon: 'fa-solid fa-location-dot',
                             },
                             {
-                                menuLink: 'Career',
+                                menuLink: 'Số điện thoại: 02471081008',
+                                icon: 'fa-solid fa-mobile-screen-button',
                             },
                             {
-                                menuLink: 'Products',
+                                menuLink: 'Email: info@homefarm.vn',
+                                icon: 'fa-solid fa-envelope',
+                            },
+                        ];
+                    each arr in arrays
+                        li.menu-item 
+                            span.ic 
+                                i(class= `${arr.icon}`)
+                            a(href="").menu-link= arr.menuLink
+            .ft-item.col.col-lg-3
+                h4.tt-ft Chính sách
+                ul.menu-list 
+                    -
+                        var arrays = [
+                            {
+                                menuLink: 'Chính sách chống hối lộ của Homefarm',
                             },
                             {
-                                menuLink: 'Contact',
+                                menuLink: 'Chính sách đổi trả & bảo hành',
+                            },
+                            {
+                                menuLink: 'Chính sách bảo mật thông tin',
+                            },
+                            {
+                                menuLink: 'Chính sách Điểm thưởng',
+                            },
+                            {
+                                menuLink: 'Chính sách vận chuyển',
+                            },
+                            {
+                                menuLink: 'Chính sách sản phẩm',
+                            },
+                            {
+                                menuLink: 'Hướng dẫn mua hàng',
+                            },
+                            {
+                                menuLink: 'Hồ Sơ Công Bố Sản Phẩm',
+                            },
+                            {
+                                menuLink: 'Ưu đãi sinh nhật đặc quyền',
                             },
                         ];
                     each arr in arrays
                         li.menu-item 
                             a(href="").menu-link= arr.menuLink
-    
+            .ft-item.col.col-lg-3
+                h4.tt-ft Hỗ trợ khách hàng
+                ul.menu-list 
+                    -
+                        var arrays = [
+                            {
+                                menuLink: 'Trang chủ',
+                            },
+                            {
+                                menuLink: 'Sản phẩm',
+                            },
+                            {
+                                menuLink: 'Giới thiệu',
+                            },
+                            {
+                                menuLink: 'Blog',
+                            },
+                            {
+                                menuLink: 'Liên hệ Homefarm',
+                            },
+                        ];
+                    each arr in arrays
+                        li.menu-item 
+                            a(href="").menu-link= arr.menuLink
+            .ft-item.col.col-lg-3
+                h4.tt-ft Theo dõi chúng tôi
+                .fanpage 
+                    .fanpage-wr 
+                         iframe(name='f7f84622931aece11', width='1000px', height='1000px', data-testid='fb:page Facebook Social Plugin', title='fb:page Facebook Social Plugin', frameborder='0', allowtransparency='true', allowfullscreen='true', scrolling='no', allow='encrypted-media', src='https://www.facebook.com/v11.0/plugins/page.php?adapt_container_width=true&app_id=942168415955372&channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df555fca9c3f0a1a27%26domain%3Dhomefarm.vn%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fhomefarm.vn%252Ffbc1f78311464ec4c%26relation%3Dparent.parent&container_width=265&hide_cover=false&href=https%3A%2F%2Fwww.facebook.com%2Fhomefarm.vn&locale=vi_VN&sdk=joey&show_facepile=true&small_header=false&tabs=&width=', style='border: none; visibility: visible; width: 265px; height: 130px;')
+                a(href="").bct
+                    +img('bct.png')
                                 
 
 
