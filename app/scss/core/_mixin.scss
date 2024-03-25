@@ -108,5 +108,12 @@
     padding: 0 #{$pd}rem;
 }
 
+@mixin icon($dp, $w, $h) {
+    display: $dp;
+    width: #{$w}rem;
+    height: #{$h}rem;
+    flex-shrink: 0;
+}
+
 
 

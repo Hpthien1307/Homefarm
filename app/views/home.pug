@@ -6,4 +6,64 @@ block vars
     -hdClass = ''
 
 block container
-    
+    section.hero.ss-pd-b
+        .container 
+            .hero-wr.row
+                .hero-side.col-3 
+                    ul.menu-list
+                        -
+                            var arrays = [
+                                {
+                                    icon: 'menu_icon_1.png',
+                                    link: 'Home cook & Comboo',
+                                },
+                                {
+                                    icon: 'menu_icon_2.png',
+                                    link: 'Món ngon ăn liền',
+                                },
+                                {
+                                    icon: 'menu_icon_3.png',
+                                    link: 'Cá hồi tươi nhập khẩu',
+                                },
+                                {
+                                    icon: 'menu_icon_4.png',
+                                    link: 'Thịt bò nhập khẩu',
+                                },
+                                {
+                                    icon: 'menu_icon_5.png',
+                                    link: 'Thực phẩm chế biến',
+                                },
+                                {
+                                    icon: 'menu_icon_6.png',
+                                    link: 'Thuỷ sản hải sản',
+                                },
+                                {
+                                    icon: 'menu_icon_7.png',
+                                    link: 'Thịt heo và thịt gà',
+                                },
+                                {
+                                    icon: 'menu_icon_8.png',
+                                    link: 'Trái cây rau củ tươi',
+                                },
+                                {
+                                    icon: 'menu_icon_9.png',
+                                    link: 'Đồ khô và gia vị',
+                                },
+                                {
+                                    icon: 'menu_icon_10.png',
+                                    link: 'Bơ sữa và phô mai',
+                                },
+                                {
+                                    icon: 'menu_icon_11.png',
+                                    link: 'Đồ uống giải khát',
+                                },
+                            ];
+                        each arr in arrays 
+                            li.menu-item 
+                                a(href="").menu-link
+                                    span.ic 
+                                        +img(arr.icon)
+                                    = arr.link
+                .bn-hero.col-9 
+                    a(href="").bg 
+                        +img('bg-hero.png')

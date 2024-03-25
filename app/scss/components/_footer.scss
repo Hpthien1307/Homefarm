@@ -6,10 +6,23 @@
 }
 
 .ft-item{
-    .tt-ft{
-        font-size: 1.6rem;
-        font-weight: 700;
+    .ft-item-heading {
+        display: flex;
+        align-items: center;
         margin-bottom: 1.7rem;
+        .tt-ft{
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        .ic{
+            @include min(768px) {
+                display: none;
+            }
+            i{
+                color: $black;
+                font-size: 1.6rem;
+            }
+        }
     }
     .menu-list{
         .menu-item{
@@ -38,6 +51,10 @@
     }
     .fanpage{
         margin-bottom: 1.6rem;
+        iframe{
+            width: 100% !important;
+            height: 100% !important;
+        }
     }
     &:first-child{
         .menu-item{

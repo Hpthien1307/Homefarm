@@ -1,0 +1,40 @@
+.hero{
+    background-color: $white;
+}
+.hero-side{
+    overflow-y: auto;
+    background-color: $white;
+    border: 0.1rem solid $border;
+    border-right: none;
+    .menu-list{
+        @include flexCol;
+        padding: 1rem 0 0 1rem;
+    }
+    .menu-item{
+        margin-bottom: 1rem;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .menu-link{
+        display: flex;
+        align-items: center;
+        transition: all .3s linear;
+        &:hover{
+            color: $orange
+        }
+        .ic{
+            @include icon('block', 1.8, 1.8);
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+.bn-hero{
+    .bg{
+        @include imgPd(1031,1546);
+        img{
+            @include imgCover;
+        }
+    }
+}

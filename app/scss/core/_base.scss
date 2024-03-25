@@ -66,6 +66,7 @@ textarea {
 
 .main {
     min-height: 100vh;
+    background-color: #f4f4f4;
 }
 
 .container {
@@ -74,6 +75,10 @@ textarea {
     height: 100%;
     margin: 0 auto;
     padding: 0 1.5rem;
+    @media (max-width:1200px) {
+        max-width: 85%;
+        margin: 0 auto;
+    } 
 }
 
 .no-scroll {
@@ -120,11 +125,11 @@ img {
 }
 
 .ss-pd-t{
-    padding-top: 0 calc(var(--ss-pd) * 2);
+    padding-top: calc(var(--ss-pd) * 2);
 }
 
 .ss-pd-b{
-    padding-bottom: 0 calc(var(--ss-pd) * 2);
+    padding-bottom: calc(var(--ss-pd) * 2);
 }
 
 .p-center{

@@ -28,9 +28,44 @@ header.hd(class=hdClass)
           +boxActHd('fa-solid fa-phone','Hỗ trợ khách hàng','02471081008','sup')
           +boxActHd('fa-solid fa-user','Tài khoản','Đăng nhập','acount')
           +cart('Giỏ hàng', '0')
-  .hd-bot
-    .container 
-      .hd-bot-wr 
+.sub-hd
+  .container 
+    .hd-bot-wr.row
+        .col-3
+            .col-flex
+                .bar   
+                    span.line 
+                    span.line 
+                    span.line 
+                .bar-txt Danh sách sản phẩm
+        .col-9 
+            .col-flex 
+                ul.menu-list 
+                    -
+                        var arrays = [
+                            {
+                                icon: 'star.png',
+                                txt: 'Hệ thống cửa hàng 200+',
+                            },
+                            {
+                                icon: 'star.png',
+                                txt: 'Mẹo hay',
+                            },
+                            {
+                                icon: 'heart.png',
+                                txt: 'Chương trình khuyến mãi',
+                            },
+                            {
+                                icon: 'star-gr.png',
+                                txt: 'Tuyển dụng',
+                            },
+                        ];
+                    each arr in arrays 
+                        li.menu-item 
+                            a.menu-link(href="")
+                                span.ic 
+                                    +img(arr.icon)
+                                = arr.txt  
 
   //- menu-mobile
   .menu-mb.menuMb

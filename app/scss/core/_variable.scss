@@ -2,12 +2,14 @@
     --font-pri: 'Roboto', serif;
     --font-sec: '', serif;
     --font-third: '', serif;
-    --size-hd-top: 6.8rem;
-    --size-hd-bot: 4rem;
-    --size-hd: calc((var(--size-hd-top)) + (var(--size-hd-bot)));
+    --size-hd: 6.8rem;
+    --size-sub-hd: 4rem;
     --w-logo: 11rem;
     --ss-pd: 3rem;
     --spc-it-nm: 1rem;
+    @media (max-width:1200px) {
+        --size-hd: 12rem;
+    }
 }
 
 // color
@@ -19,4 +21,5 @@ $color-text-second: #666666;
 $black: #000000;
 $white: #ffffff;
 $orange: #e85933;
+$border: #e1e1e1;
 

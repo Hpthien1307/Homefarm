@@ -1,8 +1,9 @@
 .ft
     .container 
         .ft-wr.row 
-            .ft-item.col.col-lg-3
-                h4.tt-ft Về chúng tôi
+            .ft-item.col-6.col-lg-3
+                .ft-item-heading 
+                    h4.tt-ft Về chúng tôi
                 a(href="").logo
                     +img('logo-ft.png') 
                 p.txt Cung cấp thực phẩm đạt tiêu chuẩn Quốc Tế
@@ -27,8 +28,11 @@
                             span.ic 
                                 i(class= `${arr.icon}`)
                             a(href="").menu-link= arr.menuLink
-            .ft-item.col.col-lg-3
-                h4.tt-ft Chính sách
+            .ft-item.col-6.col-lg-3
+                .ft-item-heading 
+                    h4.tt-ft Chính sách
+                    span.ic 
+                        i.fa-solid.fa-angle-down
                 ul.menu-list 
                     -
                         var arrays = [
@@ -63,8 +67,11 @@
                     each arr in arrays
                         li.menu-item 
                             a(href="").menu-link= arr.menuLink
-            .ft-item.col.col-lg-3
-                h4.tt-ft Hỗ trợ khách hàng
+            .ft-item.col-6.col-lg-3
+                .ft-item-heading 
+                    h4.tt-ft Hỗ trợ khách hàng
+                    span.ic 
+                        i.fa-solid.fa-angle-down
                 ul.menu-list 
                     -
                         var arrays = [
@@ -87,8 +94,9 @@
                     each arr in arrays
                         li.menu-item 
                             a(href="").menu-link= arr.menuLink
-            .ft-item.col.col-lg-3
-                h4.tt-ft Theo dõi chúng tôi
+            .ft-item.col-6.col-lg-3
+                .ft-item-heading 
+                    h4.tt-ft Theo dõi chúng tôi
                 .fanpage 
                     .fanpage-wr 
                          iframe(name='f7f84622931aece11', width='1000px', height='1000px', data-testid='fb:page Facebook Social Plugin', title='fb:page Facebook Social Plugin', frameborder='0', allowtransparency='true', allowfullscreen='true', scrolling='no', allow='encrypted-media', src='https://www.facebook.com/v11.0/plugins/page.php?adapt_container_width=true&app_id=942168415955372&channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df555fca9c3f0a1a27%26domain%3Dhomefarm.vn%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fhomefarm.vn%252Ffbc1f78311464ec4c%26relation%3Dparent.parent&container_width=265&hide_cover=false&href=https%3A%2F%2Fwww.facebook.com%2Fhomefarm.vn&locale=vi_VN&sdk=joey&show_facepile=true&small_header=false&tabs=&width=', style='border: none; visibility: visible; width: 265px; height: 130px;')
