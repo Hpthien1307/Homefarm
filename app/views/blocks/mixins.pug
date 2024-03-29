@@ -48,4 +48,17 @@ mixin cart(txt, number)
       .box 
         span.num= number
 
+mixin prodItem(thumb, title, price)
+  .prod-item
+    .inner 
+      .thumb 
+        +img(thumb)
+      .content 
+        h3.name 
+          a(href="").link= title
+        .box-action 
+          p.pricc= price
+          button.add 
+            span.ic +
+
 
